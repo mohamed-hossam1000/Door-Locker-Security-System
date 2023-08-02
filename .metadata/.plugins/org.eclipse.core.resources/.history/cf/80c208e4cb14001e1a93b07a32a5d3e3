@@ -1,0 +1,78 @@
+ /******************************************************************************
+ *
+ * Project : Smart Lock
+ *
+ * File Name: MCU_1.c
+ *
+ * Description: Human machine interface for Smart Lock
+ *
+ * Author: Mohamed Hossam
+ *
+ *******************************************************************************/
+
+#include<avr/io.h>
+#include"keypad.h"
+#include"lcd.h"
+#include"timer1.h"
+#include"uart.h"
+
+#define ENTER 15
+#define UNMATCHED_PASSWORDS 10
+
+int main()
+{
+	LCD_init();
+	/* enable global interrupt */
+	SREG|=(1<<7);
+	for(;;)
+	{
+
+	}
+}
+
+uint8 setPassword()
+{
+	/* a variable to store pressed key */
+	uint8 key;
+	/* a variable to store the password */
+	uint8 pass[5];
+	/* a variable to store the re_entered password */
+	uint8 rePass[5];
+	/* loop variable */
+	uint8 i;
+	/* ask the user for password */
+	LCD_displayString("plz enter pass: ");
+	LCD_moveCursor(1, 0);
+	/* get 5 digits password through keypad */
+	for(i=0; i<5; i++)
+	{
+		key = KEYPAD_getPressedKey();
+		pass[i] = key;
+		LCD_displayCharacter('*');
+	}
+	/* wait for user to press enter */
+	while(KEYPAD_getPressedKey() != ENTER);
+	/* clear screen and ask the user to re_enter password */
+	LCD_clearScreen();
+	LCD_displayString("plz re_enter the");
+	LCD_displayStringRowColumn(1, 0, "same pass: ");
+	/* get 5 digits password through keypad */
+	for(i=0; i<5; i++)
+	{
+		key = KEYPAD_getPressedKey();
+		rePass[i] = key;
+		LCD_displayCharacter('*');
+	}
+	/* wait for user to press enter */
+	while(KEYPAD_getPressedKey() != ENTER);
+
+	/* check if the passwords match */
+	for(i=0; i<5; i++)
+	{
+		if(pass[i] != rePass[i])
+		{
+			return UNMATCHED_PASSWORDS;
+		}
+	}
+	return 0;
+}

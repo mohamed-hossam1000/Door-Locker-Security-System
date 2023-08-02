@@ -1,0 +1,24 @@
+ /******************************************************************************
+ *
+ * Project : Smart Lock
+ *
+ * File Name: MCU_1.c
+ *
+ * Description: Human machine interface for Smart Lock
+ *
+ * Author: Mohamed Hossam
+ *
+ *******************************************************************************/
+
+#include<avr/io.h>
+#include"keypad.h"
+#include"lcd.h"
+#include"timer1.h"
+#include"uart.h"
+
+
+int main()
+{
+	/* enable global interrupt */
+	SREG|=(1<<7);
+}
