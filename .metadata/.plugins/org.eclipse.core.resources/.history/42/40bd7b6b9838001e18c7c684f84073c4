@@ -180,7 +180,7 @@ void getPassword(uint8* ptr)
 uint8 setPassword()
 {
 	/* loop variable */
-	uint8 i;
+	int i;
 	/* a variable to store the password */
 	uint8 pass[5];
 	/* a variable to store the re_entered password */
@@ -225,7 +225,7 @@ uint8 setPassword()
 uint8 checkPassword()
 {
 	/* loop variable */
-	uint8 i, j;
+	uint8 i;
 	/* a variable to store the password */
 	uint8 pass[6];
 	/* ask the user for password */
@@ -238,12 +238,11 @@ uint8 checkPassword()
 		UART_sendByte(COMPARE_PASSWORD);
 		/* get 5 digits password through keypad */
 		getPassword(pass);
-		/* receive ready confirmation from MCU2 */
-		UART_receiveByte();
 		/* send password to MCU2 */
-		for(j=0; j<5; j++)
+		for(int i=0; i<5; i++)
 		{
-			UART_sendByte(pass[j]);
+			UART_sendByte(pass[i]);
+			UART_receiveByte();
 		}
 		/* return MCU2 response  whether the two passwords match or not */
 		if(UART_receiveByte() == MATCHED_PASSWORDS)

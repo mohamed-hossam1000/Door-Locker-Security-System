@@ -1,40 +1,31 @@
-20:03:45 **** Incremental Build of configuration Debug for project MCU_1 ****
+00:48:27 **** Build of configuration Debug for project MCU2 ****
 make all 
-Building file: ../MCU_1.c
+Building file: ../MCU_2.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCU_1.d" -MT"MCU_1.o" -c -o "MCU_1.o" "../MCU_1.c"
-In file included from ../MCU_1.c:14:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCU_2.d" -MT"MCU_2.o" -c -o "MCU_2.o" "../MCU_2.c"
+In file included from ../MCU_2.c:14:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../MCU_1.c: In function 'main':
-../MCU_1.c:69: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:70: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c:89: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:90: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c:94: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:95: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c:100: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:101: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c:121: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:122: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c: In function 'setPassword':
-../MCU_1.c:188: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:194: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:195: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
-../MCU_1.c: In function 'checkPassword':
-../MCU_1.c:233: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-Finished building: ../MCU_1.c
+Finished building: ../MCU_2.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../external_eeprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"external_eeprom.d" -MT"external_eeprom.o" -c -o "external_eeprom.o" "../external_eeprom.c"
+Finished building: ../external_eeprom.c
  
 Building file: ../gpio.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
 Finished building: ../gpio.c
- 
-Building file: ../keypad.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
-In file included from ../keypad.c:12:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../keypad.c
  
 Building file: ../lcd.c
 Invoking: AVR Compiler
@@ -43,35 +34,45 @@ In file included from ../lcd.c:15:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../lcd.c
  
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
 Building file: ../timer1.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer1.d" -MT"timer1.o" -c -o "timer1.o" "../timer1.c"
 Finished building: ../timer1.c
+ 
+Building file: ../twi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"twi.d" -MT"twi.o" -c -o "twi.o" "../twi.c"
+Finished building: ../twi.c
  
 Building file: ../uart.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
 Finished building: ../uart.c
  
-Building target: MCU_1.elf
+Building target: MCU2.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,MCU_1.map -mmcu=atmega32 -o "MCU_1.elf"  ./MCU_1.o ./gpio.o ./keypad.o ./lcd.o ./timer1.o ./uart.o   
-Finished building target: MCU_1.elf
+avr-gcc -Wl,-Map,MCU2.map -mmcu=atmega32 -o "MCU2.elf"  ./MCU_2.o ./buzzer.o ./dc_motor.o ./external_eeprom.o ./gpio.o ./lcd.o ./pwm.o ./timer1.o ./twi.o ./uart.o   
+Finished building target: MCU2.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S MCU_1.elf  >"MCU_1.lss"
-Finished building: MCU_1.lss
+avr-objdump -h -S MCU2.elf  >"MCU2.lss"
+Finished building: MCU2.lss
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 MCU_1.elf
+avr-size --format=avr --mcu=atmega32 MCU2.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   13214 bytes (40.3% Full)
+Program:   13322 bytes (40.7% Full)
 (.text + .data + .bootloader)
 
-Data:        153 bytes (7.5% Full)
+Data:         17 bytes (0.8% Full)
 (.data + .bss + .noinit)
 
 

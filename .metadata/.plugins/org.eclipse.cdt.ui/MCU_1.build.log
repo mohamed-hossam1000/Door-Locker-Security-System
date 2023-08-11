@@ -1,4 +1,4 @@
-20:03:45 **** Incremental Build of configuration Debug for project MCU_1 ****
+00:44:52 **** Incremental Build of configuration Debug for project MCU_1 ****
 make all 
 Building file: ../MCU_1.c
 Invoking: AVR Compiler
@@ -17,11 +17,11 @@ c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warnin
 ../MCU_1.c:121: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
 ../MCU_1.c:122: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
 ../MCU_1.c: In function 'setPassword':
-../MCU_1.c:188: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:194: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
-../MCU_1.c:195: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../MCU_1.c:190: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../MCU_1.c:196: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../MCU_1.c:197: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
 ../MCU_1.c: In function 'checkPassword':
-../MCU_1.c:233: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../MCU_1.c:235: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
 Finished building: ../MCU_1.c
  
 Building file: ../gpio.c
@@ -68,7 +68,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   13214 bytes (40.3% Full)
+Program:   13186 bytes (40.2% Full)
 (.text + .data + .bootloader)
 
 Data:        153 bytes (7.5% Full)
@@ -78,5 +78,5 @@ Data:        153 bytes (7.5% Full)
 Finished building: sizedummy
  
 
-20:03:46 Build Finished. 0 errors, 17 warnings. (took 1s.218ms)
+00:44:53 Build Finished. 0 errors, 17 warnings. (took 1s.162ms)
 

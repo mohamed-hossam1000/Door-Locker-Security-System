@@ -146,16 +146,16 @@ uint8 setPassword()
 	uint8 pass[6];
 	/* a variable to store the re_entered password */
 	uint8 passConfirm[6];
-	/* send ready confirmation to MCU1 */
-	UART_sendByte(DUMMY_BYTE);
 	/* receive both passwords from MCU1 */
 	for(i=0; i<5; i++)
 	{
 		pass[i] = UART_receiveByte();
+		UART_sendByte(DUMMY_BYTE);
 	}
 	for(i=0; i<5; i++)
 	{
 		passConfirm[i] = UART_receiveByte();
+		UART_sendByte(DUMMY_BYTE);
 	}
 //	UART_receiveString(pass);
 //	UART_receiveString(passConfirm);
@@ -195,12 +195,11 @@ uint8 checkPassword()
 	uint8 pass[5];
 	/* a variable to store the password digit received from EEPROM */
 	uint8 passDigit;
-	/* send ready confirmation to MCU1 */
-	UART_sendByte(DUMMY_BYTE);
 	/* receive the password from MCU1 */
 	for(i=0; i<5; i++)
 	{
 		pass[i] = UART_receiveByte();
+		UART_sendByte(DUMMY_BYTE);
 	}
 	/* compare received password with the password stored in EEPROM */
 	for(i=0; i<5; i++)
