@@ -1,4 +1,4 @@
-# Door-Locker-Security-Systems
+# Door-Locker-Security-System
 a system to unlock a door using a password.
 the system can set and change the password storing it in an external EEPROM.
 upon entering the password wrong 3 times during opening the door or changing the password the system
